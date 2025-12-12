@@ -10,6 +10,13 @@ app.use(express.json())
 app.use(cors())
 const port = process.env.PORT
 
+app.use(
+  cors({
+    origin: ["https://brainly-frontend-22lw.onrender.com/"],
+    credentials: true,
+  })
+);
+
 //User Sign logic
 app.use('/api/v1' ,userRouter)
 
