@@ -12,7 +12,7 @@ const port = process.env.PORT
 
 app.use(
   cors({
-    origin: ["https://brainly-frontend-22lw.onrender.com/"],
+    origin: ["https://brainly-frontend-22lw.onrender.com/api/v1/"],
     credentials: true,
   })
 );
