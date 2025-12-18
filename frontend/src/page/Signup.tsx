@@ -3,7 +3,7 @@ import { Input } from "../components/Input";
 import { Background } from "./Background";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 export function Signup() {
@@ -41,7 +41,7 @@ export function Signup() {
                     <Input ref={emailRef} placeholder="Email" type="text" label="Email:" />
                     <button onClick={signup} className="w-full my-2 py-2 bg-[#f4c749] hover:bg-[#f2bc24] text-white rounded-md cursor-pointer">SIGN UP</button>
                     <div className="text-black flex items-center m-2 underline">
-                        <a href="/signin">Already have an Account? Signin</a>
+                        <Link to="/signin">Already have an Account? Signin</Link>
                     </div>
                 </div>
             </div>
